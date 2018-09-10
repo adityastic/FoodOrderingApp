@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "512095173347",
+    "firebase_url": "https://foodorderingapp-1d6e8.firebaseio.com",
+    "project_id": "foodorderingapp-1d6e8",
+    "storage_bucket": "foodorderingapp-1d6e8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:512095173347:android:41e7896e90875cf3",
+        "android_client_info": {
+          "package_name": "com.bhupendra.foodorderingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "512095173347-fini429uqvaa7fn2uk40ii0gms7lrsn4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bhupendra.foodorderingapp",
+            "certificate_hash": "8f17ecae86c9f1df0741dab1edb7999c1d41d0cf"
+          }
+        },
+        {
+          "client_id": "512095173347-4l9kajdun5bkh3nc8oeld0o27hiitbh2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAugw-gk4UcaQ87LmmKHVTPi1XbH5-nbo8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "512095173347-4l9kajdun5bkh3nc8oeld0o27hiitbh2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:512095173347:android:1a8ef9f9c8a257ad",
+        "android_client_info": {
+          "package_name": "com.bhupendra.foodvala"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "512095173347-jno6qm38qlbcdsii5g5765d3erqnl0oq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bhupendra.foodvala",
+            "certificate_hash": "8f17ecae86c9f1df0741dab1edb7999c1d41d0cf"
+          }
+        },
+        {
+          "client_id": "512095173347-4l9kajdun5bkh3nc8oeld0o27hiitbh2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAugw-gk4UcaQ87LmmKHVTPi1XbH5-nbo8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "512095173347-4l9kajdun5bkh3nc8oeld0o27hiitbh2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
