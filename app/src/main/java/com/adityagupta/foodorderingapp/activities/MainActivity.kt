@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         title = ""
 
         val toggle = ActionBarDrawerToggle(
-                this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+            this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
         toggle.isDrawerIndicatorEnabled = false
         toggle.setToolbarNavigationClickListener {
             drawer_layout.openDrawer(GravityCompat.START)
@@ -63,32 +63,28 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val db = FirebaseConnector.firebaseFirestore
 
         db.collection("menu")
-                .get()
-                .addOnCompleteListener { task ->
-                    if (task.isSuccessful) {
-                        for (document in task.result) {
+            .get()
+            .addOnSuccessListener { documents ->
+                for (document in documents) {
 
-                            var list: ArrayList<CategoryItem> = ArrayList()
-                            for (item in  document.data["items"] as ArrayList<*>)
-                            {
-                                var map:HashMap<*,*> = (item as HashMap<*, *>)
-                                var name :String = map.get("name") as String
-                                var cat : String = map.get("category") as String
-                                var price : Double = (map.get("price") as Any).toString().toDouble()
+                    val list: ArrayList<CategoryItem> = ArrayList()
 
-                                list.add(CategoryItem(name,cat,price))
-                            }
+                    for (item in document.data["items"] as List<*>) {
+                        val map: HashMap<*, *> = item as HashMap<*, *>
+                        val name: String = map["name"] as String
+                        val cat: String = map["category"] as String
+                        val price: Double = (map["price"] as Any).toString().toDouble()
 
-                            Common.categoryList!!.add(CategoryInfo(document.id, document.data["image"] as String,list))
-
-                            categoryAdapter = CategoryAdapter(Common.categoryList!!, this@MainActivity)
-                            recyclerView.adapter = categoryAdapter
-                            swipeRefresh.isRefreshing = false
-                        }
-                    } else {
-                        Log.e("DataSnap", "Error getting documents.", task.exception)
+                        list.add(CategoryItem(name, cat, price))
                     }
+
+                    Common.categoryList!!.add(CategoryInfo(document.id, document.data["image"] as String, list))
+
+                    categoryAdapter = CategoryAdapter(Common.categoryList!!, this@MainActivity)
+                    recyclerView.adapter = categoryAdapter
+                    swipeRefresh.isRefreshing = false
                 }
+            }
     }
 
     override fun onBackPressed() {
