@@ -3,26 +3,26 @@ package com.adityagupta.foodorderingapp.adapters
 import android.content.Context
 import android.content.Intent
 import android.graphics.*
-import android.support.v7.widget.RecyclerView
+import android.graphics.drawable.BitmapDrawable
+import android.graphics.drawable.Drawable
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.adityagupta.foodorderingapp.R
-import com.adityagupta.foodorderingapp.data.CategoryInfo
-import kotlinx.android.synthetic.main.recycler_category.view.*
-import android.graphics.drawable.Drawable
-import android.graphics.Bitmap
-import android.util.Log
 import android.widget.ImageView
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+import com.adityagupta.foodorderingapp.R
+import com.adityagupta.foodorderingapp.activities.CategoryActivity
+import com.adityagupta.foodorderingapp.data.CategoryInfo
+import com.adityagupta.foodorderingapp.data.CategoryItem
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
-import com.bumptech.glide.request.target.Target
-import android.graphics.drawable.BitmapDrawable
-import com.adityagupta.foodorderingapp.activities.CategoryActivity
-import com.adityagupta.foodorderingapp.data.CategoryItem
 import com.bumptech.glide.request.RequestOptions
+import com.bumptech.glide.request.target.Target
+import kotlinx.android.synthetic.main.recycler_category.view.*
 import java.util.*
 
 
@@ -41,7 +41,7 @@ class CategoryAdapter(private val list: ArrayList<CategoryInfo>, private val con
         override fun compare(a: CategoryItem, b: CategoryItem): Int {
             if (a.price > b.price)
                 return -1 // highest value first
-            return if (a.price === b.price) 0 else 1
+            return if (a.price == b.price) 0 else 1
         }
     }
 
@@ -49,7 +49,7 @@ class CategoryAdapter(private val list: ArrayList<CategoryInfo>, private val con
         override fun compare(a: CategoryItem, b: CategoryItem): Int {
             if (a.price < b.price)
                 return -1 // highest value first
-            return if (a.price === b.price) 0 else 1
+            return if (a.price == b.price) 0 else 1
         }
     }
 
@@ -98,7 +98,7 @@ class CategoryAdapter(private val list: ArrayList<CategoryInfo>, private val con
     }
 
     fun drawableToBitmap(drawable: Drawable): Bitmap? {
-        var bitmap: Bitmap? = null
+        var bitmap: Bitmap?
 
         if (drawable is BitmapDrawable) {
             if (drawable.bitmap != null) {
@@ -140,5 +140,5 @@ class CategoryAdapter(private val list: ArrayList<CategoryInfo>, private val con
 class CategoryHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val textTitle = itemView.textTitle!!
     val image: ImageView = itemView.image as ImageView
-    val textPriceRange = itemView.pricerange
+    val textPriceRange: TextView = itemView.pricerange
 }

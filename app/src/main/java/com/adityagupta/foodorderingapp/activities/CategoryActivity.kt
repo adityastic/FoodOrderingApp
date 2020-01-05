@@ -1,8 +1,8 @@
 package com.adityagupta.foodorderingapp.activities
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.widget.GridLayoutManager
+import androidx.recyclerview.widget.GridLayoutManager
 import android.view.WindowManager
 import com.adityagupta.foodorderingapp.R
 import com.adityagupta.foodorderingapp.adapters.CategoryItemAdapter

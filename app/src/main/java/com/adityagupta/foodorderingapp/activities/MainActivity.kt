@@ -1,11 +1,10 @@
 package com.adityagupta.foodorderingapp.activities
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.design.widget.NavigationView
-import android.support.v4.view.GravityCompat
-import android.support.v7.app.ActionBarDrawerToggle
-import android.support.v7.widget.GridLayoutManager
+import com.google.android.material.navigation.NavigationView
+import androidx.core.view.GravityCompat
+import androidx.appcompat.app.ActionBarDrawerToggle
 import android.view.MenuItem
 import android.view.WindowManager
 import com.adityagupta.foodorderingapp.adapters.CategoryAdapter
@@ -15,6 +14,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.content_main.*
 import android.util.Log
+import androidx.recyclerview.widget.GridLayoutManager
 import com.adityagupta.foodorderingapp.R
 import com.adityagupta.foodorderingapp.data.CategoryItem
 import com.adityagupta.foodorderingapp.utils.Common

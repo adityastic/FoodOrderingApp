@@ -2,7 +2,7 @@ package com.adityagupta.foodorderingapp.adapters
 
 import android.content.Context
 import android.graphics.*
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,7 +23,7 @@ import com.adityagupta.foodorderingapp.data.CategoryItem
 import com.bumptech.glide.request.RequestOptions
 
 
-class CategoryItemAdapter(private val list: ArrayList<CategoryItem>, private val context: Context) : RecyclerView.Adapter<CategoryItemHolder>() {
+class CategoryItemAdapter(private val list: ArrayList<CategoryItem>, private val context: Context) : androidx.recyclerview.widget.RecyclerView.Adapter<CategoryItemHolder>() {
 
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): CategoryItemHolder {
@@ -41,6 +41,6 @@ class CategoryItemAdapter(private val list: ArrayList<CategoryItem>, private val
 
 }
 
-class CategoryItemHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+class CategoryItemHolder(itemView: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(itemView) {
     val textTitle = itemView.textTitle!!
 }
