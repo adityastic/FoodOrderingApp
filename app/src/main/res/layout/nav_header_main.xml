@@ -20,7 +20,7 @@
             android:background="@drawable/ripple_imge"
             android:contentDescription="@string/nav_header_desc"
             android:paddingTop="@dimen/nav_header_vertical_spacing"
-            android:tint="#fff"
+            app:tint="#fff"
             app:srcCompat="@drawable/ic_restaurant_menu" />
 
         <TextView
@@ -49,8 +49,7 @@
             android:background="@drawable/ripple_imge"
             android:contentDescription="@string/nav_header_desc"
             android:paddingTop="@dimen/nav_header_vertical_spacing"
-            android:tint="#fff"
-
+            app:tint="#fff"
             app:srcCompat="@drawable/ic_order" />
 
         <TextView
@@ -78,8 +77,7 @@
             android:background="@drawable/ripple_imge"
             android:contentDescription="@string/nav_header_desc"
             android:paddingTop="@dimen/nav_header_vertical_spacing"
-            android:tint="#fff"
-
+            app:tint="#fff"
             app:srcCompat="@drawable/ic_discount" />
 
         <TextView
@@ -107,7 +105,7 @@
             android:background="@drawable/ripple_imge"
             android:contentDescription="@string/nav_header_desc"
             android:paddingTop="@dimen/nav_header_vertical_spacing"
-            android:tint="#fff"
+            app:tint="#fff"
 
             app:srcCompat="@drawable/ic_settings" />
 
@@ -143,8 +141,7 @@
             android:background="@drawable/ripple_imge"
             android:contentDescription="@string/nav_header_desc"
             android:paddingTop="@dimen/nav_header_vertical_spacing"
-            android:tint="#fff"
-
+            app:tint="#fff"
             app:srcCompat="@drawable/ic_profile" />
 
         <TextView
