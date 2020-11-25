@@ -1,0 +1,34 @@
+name: Build CI
+
+on:
+  schedule:
+    - cron: '50 15 * * *'
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/cache@v2
+      with:
+        path: |
+          ~/.gradle/caches
+          ~/.gradle/wrapper
+        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
+        restore-keys: |
+          ${{ runner.os }}-gradle-
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+    - name: Build with Gradle
+      run: ./gradlew build --stacktrace
+    - name: Grant execute permission for scripts/upload-app.sh
+      run: chmod +x scripts/upload-app.sh
+    - name: Deploy to Repo
+      run ./scripts/upload-app.sh
+      env:
+        PAT: ${{ secrets.PAT }}
+
